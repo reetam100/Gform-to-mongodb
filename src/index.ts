@@ -1,6 +1,6 @@
 import express from "express";
-import formRoutes from "./routes/form.routes";
-import config from "./config/config";
+import formRoutes from "./routes/form.routes.js";
+import config from "./config/config.js";
 import mongoose from "mongoose";
 const app = express();
 

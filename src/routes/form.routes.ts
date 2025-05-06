@@ -1,6 +1,6 @@
 import { UserType } from "./../models/user.model";
 import { Request, Response, Router } from "express";
-import { User } from "../models/user.model";
+import { User } from "../models/user.model.js";
 import { Error } from "mongoose";
 
 const router = Router();
