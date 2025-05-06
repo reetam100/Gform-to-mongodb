@@ -2,9 +2,9 @@
   "name": "mongodb-gform",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "dist/index.ts",
   "scripts": {
-    "start": "node src/index.ts",
+    "start": "node dist/index.ts",
     "dev": "nodemon src/index.ts",
     "build": "tsc"
   },
