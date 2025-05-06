@@ -24,7 +24,17 @@ router.post(
   async (req, res) => {
     try {
       console.log(req.body);
-      const newUser = await User.create(req.body);
+      const body = req.body;
+      const formatted = {
+        firstName: body["First Name"] || null,
+        lastName: body["Last Name"] || null,
+        email: body.Email || null,
+        gender: Array.isArray(body.Gender)
+          ? body.Gender[0]
+          : body.Gender || null,
+        codingLanguage: body["Coding Language"] || null,
+      };
+      const newUser = await User.create(formatted);
       return res.status(201).json({ message: "working", data: newUser });
     } catch (error) {
       console.log(error);
